@@ -23,7 +23,7 @@ class Subscribe(commands.Cog):
             self.bot.db.unsubscribe(valid_voice_channels, ctx)
             embed.description = 'done.'
             await ctx.channel.send(embed=embed)
-    
+
     @commands.command(aliases=['subbed'])
     async def subscribed(self, ctx):
         guild = ctx.guild
@@ -38,8 +38,6 @@ class Subscribe(commands.Cog):
             await msg.add_reaction('▶')
         else:
             print('no embeds')
-        
-        '''
         if channels is not None:
             vc_list = []
             for channel in channels:
@@ -49,9 +47,8 @@ class Subscribe(commands.Cog):
 
             for channel in vc_list:
                 embed.add_field(name='**{}**'.format(channel.name), value=channel.id, inline=False)
-            
             await ctx.channel.send(embed=embed)
-        '''
+
     @subscribe.command(name='all')
     async def sub_all(self, ctx):
         print('sub all')

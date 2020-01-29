@@ -16,7 +16,7 @@ if __name__ == '__main__':
             ext = "cogs." + f[0:p]
             client.load_extension(ext)
             print("Loaded " + ext)
-    
+
     if os.getenv("MODE") == "DEV":
         print("DEV MODE")
     elif os.getenv("MODE") == "PROD":
